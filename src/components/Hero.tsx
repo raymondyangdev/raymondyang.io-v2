@@ -39,7 +39,7 @@ export default function Hero() {
 
       <div>
         <Button
-          className="w-32 md:w-36 mt-2 md:mt-6"
+          className="w-32 md:w-36 mt-2 md:mt-6 cursor-pointer"
           onClick={() => window.open('./assets/misc/raymond-yang-cv-2025.pdf', '_blank')}>
           <FileTextIcon className="mr-2 h-4 w-4" />
           Resume
