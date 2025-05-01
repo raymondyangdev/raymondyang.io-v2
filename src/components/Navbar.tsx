@@ -10,8 +10,12 @@ export default function Navbar() {
       <div className="flex w-full justify-between items-center">
         {/* DESKTOP */}
         <div className="flex justify-end gap-10 items-center">
-          <div onClick={() => router.push('/')}>Home</div>
-          <div onClick={() => router.push('/blog')}>Blog</div>
+          <div className="hover:cursor-pointer underline-animation" onClick={() => router.push('/')}>
+            Home
+          </div>
+          <div className="hover:cursor-pointer underline-animation" onClick={() => router.push('/blog')}>
+            Blog
+          </div>
         </div>
       </div>
     </nav>
