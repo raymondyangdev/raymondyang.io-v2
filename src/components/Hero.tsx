@@ -1,5 +1,4 @@
 'use client';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -7,7 +6,11 @@ import IconButton from '@mui/material/IconButton';
 import { FileTextIcon } from '@radix-ui/react-icons';
 import { Button } from '@/components/ui/button';
 
-export default function Hero() {
+interface HeroProps {
+  cvUrl: string;
+}
+
+export default function Hero({ cvUrl }: HeroProps) {
   return (
     <section id="hero" className="flex flex-col">
       <div>
@@ -36,9 +39,7 @@ export default function Hero() {
       </div>
 
       <div>
-        <Button
-          className="w-32 md:w-36 mt-2 md:mt-6 cursor-pointer"
-          onClick={() => window.open('./assets/misc/raymond-yang-cv-2025.pdf', '_blank')}>
+        <Button className="w-32 md:w-36 mt-2 md:mt-6 cursor-pointer" onClick={() => window.open(cvUrl, '_blank')}>
           <FileTextIcon className="mr-2 h-4 w-4" />
           Resume
         </Button>
