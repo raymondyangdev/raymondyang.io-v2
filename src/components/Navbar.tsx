@@ -5,16 +5,13 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav
-      className={`z-10 h-[12vh] w-[85vw] md:w-[50vw] md:max-w-[50vw] flex justify-center items-center absolute md:absolute left-1/2 top-0 transform -translate-x-1/2`}>
-      <div className="flex w-full items-center md:justify-end">
-        <div className="flex justify-end gap-10 items-center">
-          <div className="hover:cursor-pointer underline-animation" onClick={() => router.push('/')}>
-            Home
-          </div>
-          <div className="hover:cursor-pointer underline-animation" onClick={() => router.push('#blog')}>
-            Blog
-          </div>
+    <nav className="flex items-center justify-end">
+      <div className="flex justify-end gap-10 items-center py-8">
+        <div className="hover:cursor-pointer" onClick={() => router.push('/')}>
+          Home
+        </div>
+        <div className="hover:cursor-pointer" onClick={() => router.push('#blog')}>
+          Blog
         </div>
       </div>
     </nav>

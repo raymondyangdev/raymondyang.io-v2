@@ -9,9 +9,7 @@ import { Button } from '@/components/ui/button';
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="flex flex-col w-4/5 md:w-1/2 min-h-[35vh] md:min-h-[60vh] mt-24 md:mt-0 gap-4 md:gap-5">
+    <section id="hero" className="flex flex-col">
       <div>
         <h1 className="text-4xl md:text-5xl font-semibold mb-4">Hey, I&apos;m Raymond 👋</h1>
         <h3 className="text-xl md:text-3xl mb-2">Build. Learn. Innovate.</h3>
