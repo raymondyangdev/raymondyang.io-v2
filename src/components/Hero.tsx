@@ -15,7 +15,6 @@ export default function Hero({ cvUrl }: HeroProps) {
     <section id="hero" className="flex flex-col">
       <div>
         <h1 className="text-4xl md:text-5xl font-semibold mb-4">Hey, I&apos;m Raymond 👋</h1>
-        <h3 className="text-xl md:text-3xl mb-2">Build. Learn. Innovate.</h3>
         <div className="flex flex-col md:flex-row md:gap-10">
           <h4 className="text-sm md:text-base font-semibold mb-4">📍 Auckland, New Zealand</h4>
           <h4 className="text-sm md:text-base font-semibold">📚 CS @ University of Auckland</h4>
