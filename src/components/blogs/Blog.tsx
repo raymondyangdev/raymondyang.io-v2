@@ -14,7 +14,7 @@ export default async function Blog() {
     <>
       {posts.length > 0 ? (
         <section id="blog" className="flex flex-col gap-4">
-          <h1 className="text-4xl">blog.</h1>
+          <h2 className="text-4xl">blog.</h2>
           <ul className="flex flex-col gap-y-4">
             {posts.map((post) => (
               <li className="hover:underline" key={post._id}>
