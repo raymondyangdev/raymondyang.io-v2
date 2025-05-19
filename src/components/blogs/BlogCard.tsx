@@ -16,14 +16,14 @@ export default function BlogCard({ title, description, slug, date }: BlogCardPro
     description?.length > maxLength ? description.slice(0, maxLength).trimEnd() + '...' : description;
 
   return (
-    <Card className="max-w-2xs shadow-lg hover:scale-[1.02] transition-transform">
-      <Link href={`/blog/${slug}`} className="flex flex-col gap-2">
-        <CardHeader>
+    <Card className="shadow-lg hover:scale-[1.02] transition-transform max-h-">
+      <Link href={`/blog/${slug}`} className="flex flex-col">
+        <CardHeader className="flex justify-between items-center">
           <CardTitle className="text-xl font-semibold">{title}</CardTitle>
           <p className="text-sm text-muted-foreground">{new Date(date).toLocaleDateString()}</p>
         </CardHeader>
+        <CardContent>{truncatedDescription}</CardContent>
       </Link>
-      <CardContent>{truncatedDescription}</CardContent>
     </Card>
   );
 }
