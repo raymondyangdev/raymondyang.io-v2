@@ -1,15 +1,11 @@
-import { client } from '@/sanity/lib/client';
 import { SanityDocument } from 'next-sanity';
 import BlogCard from '@/components/blogs/BlogCard';
-const POSTS_QUERY = `*[
-  _type == "post"
-  && defined(slug.current)
-]|order(publishedAt desc)[0...2]{_id, title, slug, publishedAt, body}`;
-const options = { next: { revalidate: 30 } };
 
-export default async function Blog() {
-  const recentPosts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+interface BlogProps {
+  recentPosts: SanityDocument[];
+}
 
+export default async function Blog({ recentPosts }: BlogProps) {
   return (
     <>
       {recentPosts.length > 0 ? (
