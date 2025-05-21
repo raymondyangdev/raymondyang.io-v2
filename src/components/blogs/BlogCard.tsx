@@ -16,7 +16,7 @@ export default function BlogCard({ title, description, slug, date }: BlogCardPro
     description?.length > maxLength ? description.slice(0, maxLength).trimEnd() + '...' : description;
 
   return (
-    <Card className="shadow-lg hover:scale-[1.02] transition-transform max-h-">
+    <Card className="shadow-lg hover:scale-[1.02] transition-transform max-h">
       <Link href={`/blog/${slug}`} className="flex flex-col">
         <CardHeader className="flex justify-between items-center">
           <CardTitle className="text-xl font-semibold">{title}</CardTitle>
